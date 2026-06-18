@@ -8,8 +8,13 @@ class Loja {
         console.log("Produto adicionado.")
     }
     listarProdutos() {
-        console.log(this.listarProdutos)
+        console.log(`Produtos cadastrados na loja ${this.nome}:`)
 
+        this.produtos.forEach((produto) => {
+            console.log(`Produto: ${produto.nome}`);
+            console.log(`Preço: R$ ${produto.preco}`);
+            console.log(`Categoria: ${produto.categoria}`);
+        });
     }
 }
 //const loja1 = new Loja("Lojao Brás")
